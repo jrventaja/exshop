@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :exshop, ExShop.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "exshop",
+  password: "exshop",
   hostname: "localhost",
   database: "exshop_dev",
   stacktrace: true,
