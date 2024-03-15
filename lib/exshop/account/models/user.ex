@@ -1,4 +1,4 @@
-defmodule ExShop.Accounts.User do
+defmodule ExShop.Account.Models.User do
   use Ecto.Schema
   import Ecto.Changeset
 
@@ -12,8 +12,8 @@ defmodule ExShop.Accounts.User do
   end
 
   @doc false
-  def changeset(user, attrs) do
-    user
+  def changeset(attrs) do
+    %__MODULE__{}
     |> cast(attrs, [:email, :password, :account_type])
     |> validate_required([:email, :password, :account_type])
     |> unique_constraint(:email)

@@ -17,7 +17,9 @@ defmodule ExShopWeb.Router do
   scope "/", ExShopWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    get "/admin", AdminController, :login
+    get "/admin/home", AdminController, :home
+    resources "/sessions", SessionController, only: [:create]
   end
 
   # Other scopes may use custom stacks.

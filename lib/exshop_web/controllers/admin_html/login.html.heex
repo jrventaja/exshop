@@ -1,0 +1,12 @@
+<.header>
+  Admin Login
+</.header>
+
+<.simple_form :let={f} for={@changeset} phx-change="validate" action={~p"/sessions"}>
+  <.input field={f[:email]} label="Email" />
+  <.input field={f[:password]} type="password" label="Password" />
+
+  <:actions>
+    <.button>Login</.button>
+  </:actions>
+</.simple_form>
